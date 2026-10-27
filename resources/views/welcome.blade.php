@@ -1,7 +1,7 @@
 <x-layouts.base>
     <header class="bg-teal-deep">
         <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-4">
-            <x-logo variant="dark" />
+            <a href="{{ route('home') }}"><x-logo variant="dark" size="h-10 w-10" /></a>
             <nav class="flex flex-wrap items-center gap-1 text-sm font-medium text-ivory/90">
                 <a href="{{ route('home') }}" class="rounded-md px-3 py-2 hover:bg-white/10">Beranda</a>
                 <a href="#studio" class="rounded-md px-3 py-2 hover:bg-white/10">Studio</a>

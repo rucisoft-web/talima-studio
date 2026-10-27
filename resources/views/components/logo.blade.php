@@ -1,15 +1,13 @@
-@props(['variant' => 'light'])
+@props(['variant' => 'light', 'size' => 'h-9 w-9'])
 
-{{-- Logo sementara: simbol buku terbuka + cahaya ilmu, sampai file logo resmi TALIMA tersedia. --}}
+{{-- Logo TALIMA: ikon buku terbuka dengan centang (Lucide "book-open-check", lisensi ISC). --}}
 @php
-    $text = $variant === 'dark' ? 'text-ivory' : 'text-teal-deep';
+    $color = $variant === 'dark' ? 'text-gold' : 'text-emerald-brand';
 @endphp
 
-<span {{ $attributes->merge(['class' => "inline-flex items-center gap-2 {$text}"]) }}>
-    <svg viewBox="0 0 40 40" class="h-8 w-8" aria-hidden="true">
-        <circle cx="20" cy="11" r="4" fill="#D7B46A" />
-        <path d="M20 31 C14 27 8 27 4 28 V15 C8 14 14 14 20 18 Z" fill="#167F78" />
-        <path d="M20 31 C26 27 32 27 36 28 V15 C32 14 26 14 20 18 Z" fill="currentColor" />
-    </svg>
-    <span class="text-xl font-bold tracking-[0.18em]">TALIMA</span>
-</span>
+<svg {{ $attributes->merge(['class' => "{$size} {$color}"]) }} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="TALIMA">
+    <title>TALIMA</title>
+    <path d="M12 21V7" />
+    <path d="m16 12 2 2 4-4" />
+    <path d="M22 6V4a1 1 0 0 0-1-1h-5a4 4 0 0 0-4 4 4 4 0 0 0-4-4H3a1 1 0 0 0-1 1v13a1 1 0 0 0 1 1h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6a1 1 0 0 0 1-1v-1.3" />
+</svg>

@@ -62,4 +62,4 @@ CI (GitHub Actions) menjalankan Pint dan seluruh test terhadap MySQL 8.
 
 Token warna ada di `resources/css/app.css`:
 Deep Teal `#123C52`, Emerald `#167F78`, Warm Gold `#D7B46A`, Ivory `#F6F4EC`.
-Logo di `resources/views/components/logo.blade.php` masih sementara sampai file logo resmi tersedia.
+Logo (ikon saja, tanpa tulisan) ada di `resources/views/components/logo.blade.php` dan `public/favicon.svg`: ikon "book-open-check" dari Lucide (lisensi ISC), emas di latar gelap dan emerald di latar terang.
