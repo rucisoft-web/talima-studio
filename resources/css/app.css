@@ -1,0 +1,46 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+
+/*
+ * Palet merek TALIMA (spesifikasi bab 23.3):
+ * Deep Teal #123C52, Emerald #167F78, Warm Gold #D7B46A, Ivory #F6F4EC.
+ */
+@theme {
+    --font-sans: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', sans-serif;
+
+    --color-teal-deep: #123c52;
+    --color-teal-deep-700: #0d2d3e;
+    --color-emerald-brand: #167f78;
+    --color-emerald-brand-700: #10625c;
+    --color-gold: #d7b46a;
+    --color-gold-200: #efe0bd;
+    --color-ivory: #f6f4ec;
+}
+
+@layer components {
+    .btn-primary {
+        @apply inline-flex items-center justify-center rounded-lg bg-emerald-brand px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-emerald-brand-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold;
+    }
+
+    .btn-secondary {
+        @apply inline-flex items-center justify-center rounded-lg border border-teal-deep/20 bg-white px-5 py-2.5 text-sm font-semibold text-teal-deep transition hover:border-teal-deep/40;
+    }
+
+    .field-label {
+        @apply mb-1 block text-sm font-medium text-teal-deep;
+    }
+
+    .field-input {
+        @apply block w-full rounded-lg border border-teal-deep/20 bg-white px-3 py-2.5 text-teal-deep shadow-sm focus:border-emerald-brand focus:outline-none focus:ring-2 focus:ring-emerald-brand/30;
+    }
+
+    .field-error {
+        @apply mt-1 text-sm text-red-700;
+    }
+
+    .card {
+        @apply rounded-2xl border border-teal-deep/10 bg-white p-6 shadow-sm;
+    }
+}
