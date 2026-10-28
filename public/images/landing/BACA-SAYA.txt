@@ -1,0 +1,19 @@
+FOTO LANDING PAGE TALIMA
+========================
+
+Unggah foto ke folder ini (public/images/landing/) dengan nama berikut.
+Format yang diterima: .jpg, .jpeg, .png, atau .webp. Foto langsung tampil
+tanpa perlu mengubah kode. Selama foto belum ada, placeholder yang tampil.
+
+  hero      Foto utama di bagian atas: guru mengajar dengan IFP di kelas
+  galeri-1  Galeri kiri: siswa berinteraksi dengan IFP
+  galeri-2  Galeri tengah: santri belajar dengan TALIMA Class
+  galeri-3  Galeri kanan: pelatihan guru TALIMA
+
+Contoh: hero.jpg, galeri-1.jpg
+
+Saran:
+- Foto potret (tegak), rasio sekitar 3:4, misalnya 900 x 1200 piksel.
+- Ukuran file di bawah 500 KB agar halaman cepat terbuka.
+- Bagian atas foto akan terpotong melengkung, jadi letakkan wajah di tengah.
+- Pastikan ada izin dari orang yang tampil di foto, terutama siswa.

@@ -1,6 +1,21 @@
-@props(['src' => null, 'alt' => '', 'label' => null, 'aspect' => 'aspect-[3/4]'])
+@props(['src' => null, 'photo' => null, 'alt' => '', 'label' => null, 'aspect' => 'aspect-[3/4]'])
 
-{{-- Bingkai berbentuk lengkung mihrab. Tanpa src, tampil sebagai placeholder berlabel. --}}
+{{--
+    Bingkai berbentuk lengkung mihrab.
+    'photo' = nama dasar file di public/images/landing/ (mis. "hero"); bila ada hero.jpg/.jpeg/.png/.webp,
+    foto itu dipakai. Tanpa foto, tampil sebagai placeholder berlabel.
+--}}
+@php
+    if (! $src && $photo) {
+        foreach (['jpg', 'jpeg', 'png', 'webp'] as $ext) {
+            if (is_file(public_path("images/landing/{$photo}.{$ext}"))) {
+                $src = asset("images/landing/{$photo}.{$ext}");
+                break;
+            }
+        }
+    }
+    $alt = $alt ?: str($label ?? '')->after('Foto: ')->toString();
+@endphp
 <figure {{ $attributes->merge(['class' => 'relative']) }}>
     <div class="relative {{ $aspect }} overflow-hidden rounded-t-full border-4 border-gold bg-teal-deep shadow-lg">
         @if ($src)
@@ -17,7 +32,4 @@
             </div>
         @endif
     </div>
-    @if ($label && $src)
-        <figcaption class="mt-3 text-center text-sm text-teal-deep/70">{{ $label }}</figcaption>
-    @endif
 </figure>

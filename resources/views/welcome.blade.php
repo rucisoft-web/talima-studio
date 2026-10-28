@@ -26,7 +26,7 @@
                     CREATE <x-ornament.star class="h-2.5 w-2.5 text-gold" /> TEACH <x-ornament.star class="h-2.5 w-2.5 text-gold" /> SHARE <x-ornament.star class="h-2.5 w-2.5 text-gold" /> EARN
                 </p>
             </div>
-            <x-arch-image class="mx-auto w-full max-w-xs" label="Foto: guru mengajar dengan IFP di kelas" />
+            <x-arch-image class="mx-auto w-full max-w-xs" photo="hero" label="Foto: guru mengajar dengan IFP di kelas" />
         </div>
     </section>
 
@@ -115,9 +115,9 @@
             <x-ornament.divider class="mt-6" />
         </div>
         <div class="mt-12 grid gap-8 sm:grid-cols-3">
-            <x-arch-image label="Foto: siswa berinteraksi dengan IFP" />
-            <x-arch-image label="Foto: santri belajar dengan TALIMA Class" />
-            <x-arch-image label="Foto: pelatihan guru TALIMA" />
+            <x-arch-image photo="galeri-1" label="Foto: siswa berinteraksi dengan IFP" />
+            <x-arch-image photo="galeri-2" label="Foto: santri belajar dengan TALIMA Class" />
+            <x-arch-image photo="galeri-3" label="Foto: pelatihan guru TALIMA" />
         </div>
     </section>
 
