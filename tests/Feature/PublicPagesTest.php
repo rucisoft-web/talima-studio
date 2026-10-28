@@ -19,18 +19,13 @@ class PublicPagesTest extends TestCase
             ->assertSee(route('guide'));
     }
 
-    public function test_landing_photo_is_used_when_uploaded(): void
+    public function test_landing_photos_are_shown(): void
     {
-        $path = public_path('images/landing/hero.jpg');
-        $this->assertFileDoesNotExist($path);
-        $this->get('/')->assertDontSee('images/landing/hero.jpg');
+        $response = $this->get('/')->assertOk();
 
-        file_put_contents($path, 'jpg');
-
-        try {
-            $this->get('/')->assertSee('images/landing/hero.jpg');
-        } finally {
-            unlink($path);
+        foreach (['hero', 'galeri-1', 'galeri-2', 'galeri-3'] as $photo) {
+            $this->assertFileExists(public_path("images/landing/{$photo}.jpg"));
+            $response->assertSee("images/landing/{$photo}.jpg");
         }
     }
 
